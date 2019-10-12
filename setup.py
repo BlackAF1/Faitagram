@@ -1,13 +1,13 @@
 import os, math, sys
 
-#OS_bit = (round(math.log(sys.maxint,2)+1))  # get the bit
+OS_bit = (round(math.log(sys.maxint,2)+1))  # get the bit
 
 os.system("sudo apt-get install python-pip && sudo apt-get install tor")   # installing dependencies
 os.system("pip install -U selenium")
 os.system("pip install Pysocks")
 os.system("pip install pyvirtualdisplay && apt-get install xvfb")
 
-#print("\n \n {} \n \n".format(OS_bit))
+print("\n \n {} \n \n".format(OS_bit))
 
 
 os.system('firefox -v > tmp')                  # store result of firefox -v in tmp
@@ -39,4 +39,3 @@ os.system("tar -xvzf geckodriver-v0.{}.{}-linux{}.tar.gz".format(first,second,OS
 os.system("rm geckodriver-v0.{}.{}-linux{}.tar.gz".format(first,second,OS_bit))
 os.system("chmod +x geckodriver")
 os.system("mv geckodriver /usr/local/bin/")
-os.system ("chmod +x faitagram && chmod +x setup.py")
